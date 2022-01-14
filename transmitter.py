@@ -19,18 +19,3 @@
 	while(loopIf >= 1): #loop
 		io.output(laser, True #convert letters to binaray and send data
 		time.sleep(<time delay>)
-
-
-
-
-#RECEPTION (idk)
-
-#mesure laser on fotoresistor
-#convert patern to letters
-#conect letters
-#output to terminal
-
-
-
-
-
