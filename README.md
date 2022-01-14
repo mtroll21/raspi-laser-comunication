@@ -4,4 +4,4 @@
           
 
 #clone the repo:
-#         git clonehttps://github.com/mtroll21/raspi-laser-comunication.git
+#         git clone https://github.com/mtroll21/raspi-laser-comunication.git
