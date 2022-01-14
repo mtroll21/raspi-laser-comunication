@@ -5,7 +5,7 @@
 #imports
 inport RPi.GPIO as io
 import time
-import letters.py #import letter map
+import letBin.py #import letter map
 
 io.setmode(io.BCM)
 
@@ -18,5 +18,6 @@ input = raw_input("") #usr input
 letters[] = input.split("") #split text to letters
 loopIf = letter.lenght
 while(loopIf >= 1): #loop
-	io.output(laser, True #convert letters to binaray and send data
+	letters
+	io.output(laser, True) #convert letters to binaray and send data
 	time.sleep(<time delay>)
