@@ -1,0 +1,37 @@
+
+cau
+no, zamyslel jsem se nad tim jek se budou transportovat data.
+Nevim zda li uz mas neaky napad, ale navrhuji toto:
+
+pro kazdej char/octet sendnout 12 bitu,
+
+normalne to bude laser low,
+
+kdyz budeme chtit zacit sendovat octet/byte/char/yo_mama, tak se da 0th bit na high
+
+1st bit bude parity.
+//to je kvuli tomu, ze kdyby nahodou nekdo prosel, tak aby jsme vedeli ze zacatek byl uriznut
+
+2st-9th bits jsou informace. Navrhuji ze se nejdrive posle LSbit a na konci MSb. protoze nejdrive posilame LSByte a na konci komunikace MSB
+
+10th bit bude taky parity
+#to je zase kvuli nekomu/necemu co muze uriznout komunikaci
+
+11th bit je high, ten znaci ze je konec transmission,
+Teoreticky tam nemusi byt, ale whatever. kdyztak kdyby tam nebyl tak to nahlasi chybu (ci returne -1 nebo nic)
+
+dale uz je jenom low.
+
+Parity bit, znaci zda je lichy/sudy pocet jednicek.
+
+takze 'A' by bolo 0x41, tedy: 1 1 1000-0010 1 1
+'C' by bolo 0x42, tedy: 1 0 1100-0010 1 1
+
+Dvarkat parity je tam z jednoho duvodu.
+Je velice nepravdepodobne, ze nekdo prerusi komunikaci "uprostred", ale uz trosku vice pravdepodobne, ze ji prerusi na "okraji",
+a nejvice, ze ji prerusi uplne. Tudiz, parity musi (mela by) byt na obou konci.
+//Premyslel jsem o tom, ze bych nedal paritku, ale jenom high bit, ci low bit na obou konci, ale kdyz uz tam jsou tak proc je nevyuzit.
+//umim i implementovat auto-correckci bitu, ale uz takto je to BLOATED. Neni lepsi poslat 2 octety najednou?
+
+to co jsem nevyresil je jak daleko by meli byt od sebe dve pismena. Nechci aby se to neak posralo a zacalo detekovat konec prvniho charakteru
+jako zacatek a zacatek druheho charakteru jako konec.
