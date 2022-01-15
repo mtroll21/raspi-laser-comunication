@@ -17,15 +17,14 @@ kdyz budeme chtit zacit sendovat octet/byte/char/yo_mama, tak se da 0th bit na h
 10th bit bude taky parity
 #to je zase kvuli nekomu/necemu co muze uriznout komunikaci
 
-11th bit je high, ten znaci ze je konec transmission,
-Teoreticky tam nemusi byt, ale whatever. kdyztak kdyby tam nebyl tak to nahlasi chybu (ci returne -1 nebo nic)
+11th bit je low, ten znaci ze je konec transmission,
 
 dale uz je jenom low.
 
 Parity bit, znaci zda je lichy/sudy pocet jednicek.
 
-takze 'A' by bolo 0x41, tedy: 1 1 1000-0010 1 1
-'C' by bolo 0x42, tedy: 1 0 1100-0010 1 1
+takze 'A' by bolo 0x41, tedy: 1 1 1000-0010 1 0
+'C' by bolo 0x42, tedy: 1 0 1100-0010 1 0
 
 Dvarkat parity je tam z jednoho duvodu.
 Je velice nepravdepodobne, ze nekdo prerusi komunikaci "uprostred", ale uz trosku vice pravdepodobne, ze ji prerusi na "okraji",
