@@ -30,7 +30,7 @@ takze 'A' by bolo 0x41, tedy: 1 1 1000-0010 1 1
 Dvarkat parity je tam z jednoho duvodu.
 Je velice nepravdepodobne, ze nekdo prerusi komunikaci "uprostred", ale uz trosku vice pravdepodobne, ze ji prerusi na "okraji",
 a nejvice, ze ji prerusi uplne. Tudiz, parity musi (mela by) byt na obou konci.
-//Premyslel jsem o tom, ze bych nedal paritku, ale jenom high bit, ci low bit na obou konci, ale kdyz uz tam jsou tak proc je nevyuzit.
+//Premyslel jsem o tom, ze 1st bit a 10th bit nevyuzil na paritku, ale fixnute. ale kdyz uz tam jsou tak proc je nevyuzit.
 //umim i implementovat auto-correckci bitu, ale uz takto je to BLOATED. Neni lepsi poslat 2 octety najednou?
 
 to co jsem nevyresil je jak daleko by meli byt od sebe dve pismena. Nechci aby se to neak posralo a zacalo detekovat konec prvniho charakteru
