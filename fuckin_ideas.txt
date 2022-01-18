@@ -34,3 +34,5 @@ a nejvice, ze ji prerusi uplne. Tudiz, parity musi (mela by) byt na obou konci.
 
 to co jsem nevyresil je jak daleko by meli byt od sebe dve pismena. Nechci aby se to neak posralo a zacalo detekovat konec prvniho charakteru
 jako zacatek a zacatek druheho charakteru jako konec.
+
+nice ty si to fakt pojmenoval fuckin ideas
